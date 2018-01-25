@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <title>Dinner planner</title>
 
     <!-- Bootstrap CSS -->
@@ -13,8 +12,110 @@
   </head>
   <body>
   <nav class="navbar navbar-dark" style="background-color: #dadada;">
-      <a class="navbar-brand" href="#">Dinner planner</a>
+    <ul class="navbar-nav nav nav-justified">
+      <li><a class="navbar-brand" href="#">Dinner planner</a></li>
+    </ul>
   </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2" style="border-right: 3px solid black; padding-bottom: 100%;">
+        <h4>My dinner</h4>
+        <div style="padding-top: 20px;">
+          <label>People:</label>
+          <input type="number" style="width: 50%; padding-left: 10px; margin-left: 10px;" value="3" min="0"/>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col" style="text-align: left;">
+              dish name
+            </div>
+            <div class="col" style="text-align: right;">
+              cost
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p class="text-danger" style="text-align: right;">0.00 SEK</p>
+      <center><button type="button" class="btn btn-default btn-md">Confirm dinner</button></center>
+      </div>
+      <div class="col-5" style="padding-top: 20px; padding-left: 50px;">
+        <h2>Baked brie</h2>
+        <div>
+          <img style="width: 80%;" src="images/bakedbrie.jpg"/>
+        </div>
+        <p style="padding-top: 20px; width: 80%;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        </p>
+        <button type="button" class="btn btn-warning">back to search</button>
+      </div>
+      <div class="col-5">
+        <div class="card bg-light" style="margin-top: 66px; padding-bottom: width: 80%;">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center; padding-top: 10px;">Ingredients for 3 people</h4>
+            <hr>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-3">
+                  6 st
+                </div>
+                <div class="col-5">
+                  peaches
+                </div>
+                <div class="col-2">
+                  SEK
+                </div>
+                <div class="col-2">
+                  15.00
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  200 g
+                </div>
+                <div class="col-5">
+                  brie cheese
+                </div>
+                <div class="col-2">
+                  SEK
+                </div>
+                <div class="col-2">
+                  26.00
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  50 g
+                </div>
+                <div class="col-5">
+                  walnuts
+                </div>
+                <div class="col-2">
+                  SEK
+                </div>
+                <div class="col-2">
+                  48.00
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                </div>
+                <div class="col-5">
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

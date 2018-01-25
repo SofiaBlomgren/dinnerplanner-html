@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <title>Dinner planner</title>
 
     <!-- Bootstrap CSS -->
@@ -13,8 +12,95 @@
   </head>
   <body>
   <nav class="navbar navbar-dark" style="background-color: #dadada;">
-      <a class="navbar-brand" href="#">Dinner planner</a>
+    <ul class="navbar-nav nav nav-justified">
+      <li><a class="navbar-brand" href="#">Dinner planner</a></li>
+    </ul>
   </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2" style="border-right: 3px solid black; padding-bottom: 100%;">
+        <h4>My dinner</h4>
+        <div style="padding-top: 20px;">
+          <label>People:</label>
+          <input type="number" style="width: 50%; padding-left: 10px; margin-left: 10px;" value="3" min="0"/>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col font-weight-bold" style="text-align: left;">
+              dish name
+            </div>
+            <div class="col font-weight-bold" style="text-align: right;">
+              cost
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col" style="text-align: left;">
+              Baked brie
+            </div>
+            <div class="col" style="text-align: right;">
+              89.00 SEK
+            </div>
+          </div>
+        </div>
+        <p class="text-danger" style="text-align: right; padding-top: 10px; padding-right: 15px;">0.00 SEK</p>
+      <center><button type="button" class="btn btn-warning btn-md">Confirm dinner</button></center>
+      </div>
+      <div class="col">
+        <p style="margin: 30px;">Add another dish</p>
+        <div class="input-group mb-3" style="padding-bottom: 20px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Enter key words" aria-label="Search">
+          <select class="custom-select" id="inputGroupSelect03">
+            <option selected>All</option>
+            <option value="1">Main Course</option>
+            <option value="2">Side Dish</option>
+            <option value="3">Dessert</option>
+            <option value="4">Appetizer</option>
+          </select>
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
+        <hr>
+        <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="images/bakedbrie.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Baked brie</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/icecream.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Ice cream</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/meatballs.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Meatballs</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/sourdough.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Sourdough</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/toast.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Toast</h4>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>

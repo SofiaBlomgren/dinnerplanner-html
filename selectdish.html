@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet">
     <title>Dinner planner</title>
 
     <!-- Bootstrap CSS -->
@@ -20,19 +19,26 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-2" style="border-right: 3px solid black; padding-bottom: 100%;">
-        My dinner
-        <div>
-        People: <span id="numberOfGuests"></span>
+      <div class="col-lg-2" style="border-right: 3px solid black; padding-bottom: 100%;">
+        <h4>My dinner</h4>
+        <div style="padding-top: 20px;">
+          <label>People:</label>
+          <input type="number" style="width: 50%; padding-left: 10px; margin-left: 10px;" value="3" min="0"/>
         </div>
-      <div>
-          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-          <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-      </div>
-      <p>
-        Dish name Cost
-      </p>
-      <center><button type="button" class="btn btn-primary btn-md">Confirm dinner</button></center>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col" style="text-align: left;">
+              dish name
+            </div>
+            <div class="col" style="text-align: right;">
+              cost
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p class="text-danger" style="text-align: right;">0.00 SEK</p>
+      <center><button type="button" class="btn btn-dafault btn-md">Confirm dinner</button></center>
       </div>
       <div class="col">
         <p style="margin: 30px;">Find a dish</p>
@@ -50,6 +56,38 @@
           </div>
         </div>
         <hr>
+        <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="images/bakedbrie.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Baked brie</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/icecream.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Ice cream</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/meatballs.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Meatballs</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/sourdough.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Sourdough</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/toast.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align: center;">Toast</h4>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
