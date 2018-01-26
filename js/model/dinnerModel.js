@@ -6,12 +6,15 @@ var DinnerModel = function() {
 
 	var numberofguests = 2;
 
+	var selecteddish = "";
+
 
 	this.setNumberOfGuests = function(num) {
-		//TODO Lab 1
+		numberofguests = num;
 	}
 	
 	this.getNumberOfGuests = function() {
+		return numberofguests
 		//TODO Lab 1
 	}
 
