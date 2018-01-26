@@ -16,3 +16,10 @@
     margin: 20px;
     width: 200px;
 }
+
+.card-img-top {
+	object-fit: cover;
+ 	object-position: center;
+ 	height:180px;
+   	width:180px;
+}
