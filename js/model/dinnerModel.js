@@ -14,23 +14,28 @@ var DinnerModel = function() {
 	}
 	
 	this.getNumberOfGuests = function() {
-		return numberofguests
-		//TODO Lab 1
+		return numberofguests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
-		//TODO Lab 1
-	}
+		for (i = 0; i < dishes.length; i++){
+			if(dishes.type == type) {
+				selecteddish += dishes.name;}
+		}
+		return selecteddish}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		//TODO Lab 1
+		for (i = 0; i < dishes.length; i++) { 
+    		return dishes.name;}
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 1
+		for (i = 0; i < dishes.length; i++) { 
+    		for (i = 0; i < ingredients.length; i++) { 
+    		return ingredients.name;}}
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
