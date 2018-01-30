@@ -6,7 +6,7 @@ var DinnerModel = function() {
 
 	var numberofguests = 2;
 
-	var selecteddish = "";
+	var selecteddish = [];
 
 
 	//Sets numberofguests to num
@@ -23,19 +23,19 @@ var DinnerModel = function() {
 	this.getSelectedDish = function(type) {
 		for (i = 0; i < dishes.length; i++){
 			if(dishes.type == type) {
-				selecteddish += dishes.name;}
+				selecteddish.push(dishes);}
 		}
-		return selecteddish}
+		return selecteddish.name}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		for (i = 0; i < dishes.length; i++) { 
-    		return dishes.name;}
+		for (i = 0; i < selecteddish.length; i++) {
+    		return selecteddish.name;} //We want the names of the selected dishes, not sure how
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		for (i = 0; i < dishes.length; i++) { 
+		for (i = 0; i < selecteddish.length; i++) { 
     		for (i = 0; i < ingredients.length; i++) { 
     		return ingredients.name;}}
 	}
