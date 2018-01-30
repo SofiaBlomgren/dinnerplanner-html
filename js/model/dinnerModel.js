@@ -9,10 +9,12 @@ var DinnerModel = function() {
 	var selecteddish = "";
 
 
+	//Sets numberofguests to num
 	this.setNumberOfGuests = function(num) {
 		numberofguests = num;
 	}
 	
+	//Returns numberofguests
 	this.getNumberOfGuests = function() {
 		return numberofguests;
 	}
