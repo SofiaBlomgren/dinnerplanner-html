@@ -40,6 +40,7 @@
         <p class="text-danger" style="text-align: right;">0.00 SEK</p>
       <center><button type="button" class="btn btn-default btn-md">Confirm dinner</button></center>
       </div>
+      
       <div class="col-5" style="padding-top: 20px; padding-left: 50px;">
         <h2>Baked brie</h2>
         <div>
@@ -50,10 +51,10 @@
         </p>
         <button type="button" class="btn btn-warning">back to search</button>
       </div>
-      <div class="col-5">
+      <div class="col-5" id="recipe">
         <div class="card bg-light" style="margin-top: 66px; padding-bottom: width: 80%;">
           <div class="card-block">
-            <h4 class="card-title" style="text-align: center; padding-top: 10px;">Ingredients for 3 people</h4>
+            <h4 class="card-title" style="text-align: center; padding-top: 10px;">Ingredients for <span id='numberOfGuests'></span> people</h4>
             <hr>
             <div class="container-fluid">
               <div class="row">
@@ -126,6 +127,7 @@
   <script src="js/app.js"></script>
   <script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
+  <script src="js/view/recipeView.js"></script>
   <!-- TODO: Here you should include JS code for your other views -->
   </body>
 </html>
