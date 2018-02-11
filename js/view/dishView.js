@@ -33,7 +33,8 @@ var Dish = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	var getDish = container.find("#getDish");
+	var dishName = container.find("#dishName");
+	var dishImg = container.find("dishImg")
 
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
@@ -52,6 +53,7 @@ var Dish = function (container, model) {
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	getDish.html(model.getDish());
+	dishName.html(model.getDishName());
+	dishImg.html(model.getDishImg());
 	
 }

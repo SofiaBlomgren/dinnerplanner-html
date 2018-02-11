@@ -8,8 +8,6 @@ var DinnerModel = function() {
 
 	var selecteddish = [];
 
-	var id = 4;
-
 
 	//Sets numberofguests to num
 	this.setNumberOfGuests = function(num) {
@@ -85,6 +83,23 @@ var DinnerModel = function() {
 	  for(key in dishes){
 			if(dishes[key].id == id) {
 				return dishes[key];
+			}
+		}
+	}
+
+	//function that returns a dish name of specific ID
+	this.getDishName = function (id) {
+	  for(key in dishes){
+			if(dishes[key].id == 3) {
+				return dishes[key].name;
+			}
+		}
+	}
+
+	this.getDishImg = function (id) {
+	  for(key in dishes){
+			if(dishes[key].id == 1) {
+				return dishes[key].image;
 			}
 		}
 	}
