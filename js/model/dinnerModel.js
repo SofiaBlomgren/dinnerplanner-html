@@ -98,7 +98,7 @@ var DinnerModel = function() {
 
 	this.getDishImg = function (id) {
 	  for(key in dishes){
-			if(dishes[key].id == 1) {
+			if(dishes[key].id == 3) {
 				return dishes[key].image;
 			}
 		}
@@ -133,7 +133,7 @@ var DinnerModel = function() {
 		'id':1,
 		'name':'French toast',
 		'type':'starter',
-		'image':'images/toast.jpg',
+		'image':'toast.jpg',
 		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
 		'ingredients':[{ 
 			'name':'eggs',
