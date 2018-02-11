@@ -17,6 +17,11 @@
     width: 200px;
 }
 
+.carding {
+    margin-right: 40px;
+    width: 650px;
+}
+
 .card-img-top {
 	object-fit: cover;
  	object-position: center;
