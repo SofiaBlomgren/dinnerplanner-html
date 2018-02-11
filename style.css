@@ -23,3 +23,7 @@
  	height:180px;
    	width:180px;
 }
+
+.input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
