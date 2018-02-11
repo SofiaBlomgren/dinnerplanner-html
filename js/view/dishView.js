@@ -34,7 +34,8 @@ var Dish = function (container, model) {
 	 * 
 	 */
 	var dishName = container.find("#dishName");
-	var dishImg = container.find("dishImg")
+	var dishImg = container.find("#dishImg")
+	var dishDescription = container.find("#dishDescription")
 
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
@@ -55,5 +56,6 @@ var Dish = function (container, model) {
 	 */
 	dishName.html(model.getDishName());
 	dishImg.html(model.getDishImg());
+	dishDescription.html(model.getDishDescription());
 	
 }
