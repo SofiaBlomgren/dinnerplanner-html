@@ -34,15 +34,30 @@ var Card = function (container, model) {
 	 * make your view code modular and ensure it dosn't break if by mistake somebody else
 	 * in some other view gives the same ID to another element.
 	 * 
+
+
+
+		<div class="card">
+          <img class="card-img-top" src="images/bakedbrie.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Baked brie</h4>
+          </div>
+        </div>
+
+
 	 */
 
+
+	var cardContainer = [];
+
 	var createCard = model.getAllDishes().forEach(function(dish){
+
 			var newDiv1 = document.createElement("div");
 			newDiv1.className = "card";
 
 			var newImg = document.createElement("img");
 			newImg.className = "card-img-top";
-			newImg.src = dish.image;
+			newImg.src = "images/"+dish.image;
 			newImg.alt = "Card image cap"
 			newDiv1.appendChild(newImg);
 
@@ -56,11 +71,13 @@ var Card = function (container, model) {
 			newH4.appendChild(newContent);
 			newDiv2.appendChild(newH4);
 			
+			cardContainer.push(newDiv1);
+
 			})
 
 
 	var allDishes = container.find("#allDishes");
-	allDishes.html(createCard);
+	allDishes.html(cardContainer);
 	//var dishName = container.find("#dishName");
 
 	/**
