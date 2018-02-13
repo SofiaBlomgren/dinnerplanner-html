@@ -12,6 +12,8 @@
  * @param {jQuery object} container - references the HTML parent element that contains the view.
  * @param {Object} model - the reference to the Dinner Model
  */ 
+
+
 var Card = function (container, model) {
 	
 	/**
@@ -33,7 +35,33 @@ var Card = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	var dishName = container.find("#dishName");
+	var array = model.dishes;
+
+	var createCard = array.forEach(function(dish){
+			var newDiv1 = document.createElement("div");
+			newDiv1.className = "card";
+
+			var newImg = document.createElement("img");
+			newImg.className = "card-img-top";
+			newImg.src = dish.image;
+			newImg.alt = "Card image cap"
+			newDiv1.appendChild(newImg);
+
+			var newDiv2 = document.createElement("div");
+			newDiv2.className = "card-block";
+			newDiv1.appendChild(newDiv2);
+
+			var newH4 = document.createElement("h4");
+			newH4.className = "card-title";
+			var newContent = document.createTextNode(dish.name);
+			newH4.appendChild(newContent);
+			newDiv2.appendChild(newH4);
+			
+			})
+
+
+
+	//var dishName = container.find("#dishName");
 
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
@@ -45,13 +73,13 @@ var Card = function (container, model) {
 	 * this button and do something with it (see Lab 2).
 	 * 
 	 */
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
+	//this.plusButton = container.find("#plusGuest");
+	//this.minusButton = container.find("#minusGuest");
 	
 	/**
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	dishName.html(model.getDishName());
+	createCard.html(model.getDishName());
 	
 }
