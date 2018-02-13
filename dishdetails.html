@@ -19,7 +19,7 @@
   </nav>
 
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="dish">
       <div class="col-lg-2" style="border-right: 3px solid black; padding-bottom: auto;">
         <h4>My dinner</h4>
         <div style="padding-top: 20px;">
@@ -42,7 +42,7 @@
       <center><button type="button" class="btn btn-default btn-md">Confirm dinner</button></center>
       </div>
       
-      <div class="col-5" id="dish" style="padding-top: 20px; padding-left: 50px;">
+      <div class="col-5" style="padding-top: 20px; padding-left: 50px;">
         <h2><span id='dishName'></span></h2>
         <div>
           <img style="width: 80%;" src="" id="dishImg"/>
@@ -57,8 +57,9 @@
           <div class="card-block">
             <h4 class="card-title" style="text-align: center; padding-top: 10px;">Ingredients for <span id='numberOfGuests'></span> people</h4>
             <hr>
-            <div class="container-fluid">
-              <div class="row">
+            <div class="container-fluid" id="allIngredients">
+              
+              <!--<div class="row">
                 <div class="col-3">
                   6 st
                 </div>
@@ -99,7 +100,7 @@
                 <div class="col-2">
                   48.00
                 </div>
-              </div>
+              </div>-->
               <hr>
                 <div class="row">
                   <div class="col-8">
@@ -132,6 +133,8 @@
   <script src="js/view/exampleView.js"></script>
   <script src="js/view/recipeView.js"></script>
   <script src="js/view/dishView.js"></script>
+  <script src="js/view/cardView.js"></script>
+  <script src="js/view/myDinnerView.js"></script>
   <!-- TODO: Here you should include JS code for your other views -->
   </body>
 </html>

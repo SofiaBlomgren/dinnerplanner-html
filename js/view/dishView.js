@@ -33,10 +33,54 @@ var Dish = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	var dishName = container.find("#dishName");
-	var dishImg = container.find("#dishImg")
-	var dishDescription = container.find("#dishDescription")
+	var currentDish = model.getDish(3);
+	var people = model.getNumberOfGuests();
 
+	var dishName = container.find("#dishName");
+	var dishImg = container.find("#dishImg");
+	var dishDescription = container.find("#dishDescription");
+
+
+
+	var ingredients = [];
+
+	var ingredientsCard = currentDish.ingredients.forEach(function(ingredient){
+
+			var newDiv1 = document.createElement("div");
+			newDiv1.className = "row";
+
+			var newDiv2 = document.createElement("div");
+			newDiv2.className = "col-3";
+			var newContent = document.createTextNode(ingredient.quantity*people + ingredient.unit);
+			newDiv2.appendChild(newContent);
+			newDiv1.appendChild(newDiv2);
+
+			var newDiv3 = document.createElement("div");
+			newDiv3.className = "col-5";
+			var newContent = document.createTextNode(ingredient.name);
+			newDiv3.appendChild(newContent);
+			newDiv1.appendChild(newDiv3);
+
+			var newDiv4 = document.createElement("div");
+			newDiv4.className = "col-2";
+			var newContent = document.createTextNode("SEK");
+			newDiv4.appendChild(newContent);
+			newDiv1.appendChild(newDiv4);
+
+			var newDiv5 = document.createElement("div");
+			newDiv5.className = "col-2";
+			var newContent = document.createTextNode(ingredient.price*people);
+			newDiv5.appendChild(newContent);
+			newDiv1.appendChild(newDiv5);
+
+			
+			ingredients.push(newDiv1);
+
+			})
+
+
+	var allIngredients = container.find("#allIngredients");
+	allIngredients.html(ingredients);
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
 	 * define them as this.someName. We don't need this in Lab 1 yet, but in Lab 2 it 
@@ -54,8 +98,8 @@ var Dish = function (container, model) {
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	dishName.html(model.getDishName());
-	dishImg.attr("src","images/"+model.getDishImg());
-	dishDescription.html(model.getDishDescription());
+	dishName.html(currentDish.name);
+	dishImg.attr("src","images/"+currentDish.image);
+	dishDescription.html(currentDish.description);
 	
 }
