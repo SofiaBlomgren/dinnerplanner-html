@@ -55,7 +55,7 @@ var Dish = function (container, model) {
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 	dishName.html(model.getDishName());
-	dishImg.html(model.getDishImg());
+	dishImg.attr("src","images/"+model.getDishImg());
 	dishDescription.html(model.getDishDescription());
 	
 }

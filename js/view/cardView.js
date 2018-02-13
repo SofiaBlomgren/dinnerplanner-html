@@ -35,16 +35,6 @@ var Card = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 
-
-
-		<div class="card">
-          <img class="card-img-top" src="images/bakedbrie.jpg" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Baked brie</h4>
-          </div>
-        </div>
-
-
 	 */
 
 
@@ -78,7 +68,6 @@ var Card = function (container, model) {
 
 	var allDishes = container.find("#allDishes");
 	allDishes.html(cardContainer);
-	//var dishName = container.find("#dishName");
 
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
@@ -97,6 +86,5 @@ var Card = function (container, model) {
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	//createCard.html(model.getDishName());
 	
 }
