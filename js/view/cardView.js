@@ -35,9 +35,8 @@ var Card = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	var array = model.dishes;
 
-	var createCard = array.forEach(function(dish){
+	var createCard = model.getAllDishes().forEach(function(dish){
 			var newDiv1 = document.createElement("div");
 			newDiv1.className = "card";
 
@@ -60,7 +59,8 @@ var Card = function (container, model) {
 			})
 
 
-
+	var allDishes = container.find("#allDishes");
+	allDishes.html(createCard);
 	//var dishName = container.find("#dishName");
 
 	/**
@@ -80,6 +80,6 @@ var Card = function (container, model) {
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	createCard.html(model.getDishName());
+	//createCard.html(model.getDishName());
 	
 }
