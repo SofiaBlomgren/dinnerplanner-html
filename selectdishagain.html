@@ -20,7 +20,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-2" style="border-right: 3px solid black; padding-bottom: auto;">
+      <div class="col-lg-2" id="myDinner" style="border-right: 3px solid black; padding-bottom: auto;">
         <h4>My dinner</h4>
         <div style="padding-top: 20px;">
           <label>People:</label>
@@ -41,7 +41,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col" style="text-align: left;">
-              Baked brie
+              <span id='dishName'></span>
             </div>
             <div class="col" style="text-align: right;">
               89.00 SEK
@@ -112,6 +112,7 @@
   <script src="js/app.js"></script>
   <script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
+  <script src="js/view/myDinnerView.js"></script>
   <!-- TODO: Here you should include JS code for your other views -->
   </body>
 </html>
