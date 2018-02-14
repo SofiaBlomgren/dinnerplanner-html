@@ -33,6 +33,7 @@ var Dish = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
+	
 	var currentDish = model.getDish(3);
 	var people = model.getNumberOfGuests();
 
@@ -86,6 +87,7 @@ var Dish = function (container, model) {
 	var dishName = container.find("#dishName");
 	var dishImg = container.find("#dishImg");
 	var dishDescription = container.find("#dishDescription");
+	var numberOfGuests = container.find("#numberOfGuests");
 	var allIngredients = container.find("#allIngredients");
 	var price = container.find("#price");
 
@@ -107,6 +109,7 @@ var Dish = function (container, model) {
 	dishName.html(currentDish.name);
 	dishImg.attr("src","images/"+currentDish.image);
 	dishDescription.html(currentDish.description);
+	numberOfGuests.html(model.getNumberOfGuests());
 	allIngredients.html(ingredients);
 	price.html(totalprice);
 	

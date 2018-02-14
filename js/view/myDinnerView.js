@@ -64,7 +64,7 @@ var MyDinner = function (container, model) {
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	dishName.html(model.getDishName());
+	dishName.html(currentDish.name);
 	people.attr("value",model.getNumberOfGuests());
 	price.html(dishprice);
 	

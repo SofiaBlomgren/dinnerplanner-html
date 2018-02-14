@@ -4,7 +4,7 @@ var DinnerModel = function() {
 	//TODO Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
 
-	var numberofguests = 2;
+	var numberofguests = 3;
 
 	var selecteddishes = [{
 		'id':3,
@@ -127,39 +127,7 @@ var DinnerModel = function() {
 			}
 		}
 	}
-
-	//function that returns a dish name of specific ID
-	this.getDishName = function (id) {
-	  for(key in dishes){
-			if(dishes[key].id == 3) {
-				return dishes[key].name;
-			}
-		}
-	}
-
-	this.getDishImg = function (id) {
-	  for(key in dishes){
-			if(dishes[key].id == 3) {
-				return dishes[key].image;
-			}
-		}
-	}
-
-	this.getDishDescription = function (id) {
-	  for(key in dishes){
-			if(dishes[key].id == 3) {
-				return dishes[key].description;
-			}
-		}
-	}
-
-	//this.getDish = function (id) {
-	//  for(key in dishes){
-	//		if(dishes[key].id == id) {
-	//			return dishes[key];
-	//		}
-	//	}
-	//}
+	
 
 
 	// the dishes variable contains an array of all the 
