@@ -4,6 +4,7 @@ $(function() {
 	
 	// And create the instance of ExampleView
 	var exampleView = new ExampleView($("#exampleView"));
+	var printout = new Printout($("#printout"),model);
 	var dish = new Dish($("#dish"),model);
 	var card = new Card($("#card"),model);
 	var myDinner = new MyDinner($("#myDinner"),model);
