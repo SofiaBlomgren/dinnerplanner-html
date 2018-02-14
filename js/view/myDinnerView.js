@@ -33,8 +33,20 @@ var MyDinner = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	var dishName = container.find("#dishName");
+	var currentDish = model.getDish(3);
+	var people = model.getNumberOfGuests();
 
+	var dishprice = 0;
+	
+	currentDish.ingredients.forEach(function(ingredient){
+		dishprice += ingredient.price*people;
+
+		})
+
+
+	var people = container.find("#people")
+	var dishName = container.find("#dishName");
+	var price = container.find("#price");
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
 	 * define them as this.someName. We don't need this in Lab 1 yet, but in Lab 2 it 
@@ -45,13 +57,15 @@ var MyDinner = function (container, model) {
 	 * this button and do something with it (see Lab 2).
 	 * 
 	 */
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
+	//this.plusButton = container.find("#plusGuest");
+	//this.minusButton = container.find("#minusGuest");
 	
 	/**
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 	dishName.html(model.getDishName());
+	people.attr("value",model.getNumberOfGuests());
+	price.html(dishprice);
 	
 }

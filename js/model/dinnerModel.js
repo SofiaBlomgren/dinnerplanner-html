@@ -6,7 +6,29 @@ var DinnerModel = function() {
 
 	var numberofguests = 2;
 
-	var selecteddishes = [];
+	var selecteddishes = [{
+		'id':3,
+		'name':'Baked Brie with Peaches',
+		'type':'starter',
+		'image':'bakedbrie.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'round Brie cheese',
+			'quantity':10,
+			'unit':'g',
+			'price':8
+			},{
+			'name':'raspberry preserves',
+			'quantity':15,
+			'unit':'g',
+			'price':10
+			},{
+			'name':'peaches',
+			'quantity':1,
+			'unit':'',
+			'price':4
+			}]
+		}];
 
 
 	//Sets numberofguests to num
@@ -25,7 +47,7 @@ var DinnerModel = function() {
 			if(dishes.type == type) {
 				selecteddish.push(dishes);}
 		}
-		return selecteddish.name}
+		return selecteddish}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
