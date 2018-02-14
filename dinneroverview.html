@@ -15,10 +15,10 @@
   <nav class="navbar navbar-dark" style="background-color: #dadada;">
       <a class="navbar-brand" href="#">Dinner planner</a>
   </nav>
-  <div class="container-fluid">
+  <div class="container-fluid" id="overview">
     <div class="row">
       <div class="col" style="text-align: left;">
-        <h4>My dinner: 3 people</h4>
+        <h4>My dinner: <span id='numberOfGuests'></span> people</h4>
       </div>
       <div class="col" style="text-align: right;">
         <button type="button" class="btn btn-warning">Go back and edit dinner</button>
@@ -26,7 +26,9 @@
     </div>
   </div>
   <hr>
-  <div class="container-fluid" style="width:50%;">
+  <div id="card">
+  <div class="cards" id='allDishes'></div>
+  <!--<div class="container-fluid" style="width:50%;">
     <div align="center">
       <div class="row">
         <div class="col">
@@ -50,7 +52,7 @@
         <vr>
       </div>
     </div>
-  </div>
+  </div>-->
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -61,6 +63,12 @@
   <script src="js/app.js"></script>
   <script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
+  <script src="js/view/cardView.js"></script>
+  <script src="js/view/recipeView.js"></script>
+  <script src="js/view/dishView.js"></script>
+  <script src="js/view/myDinnerView.js"></script>
+  <script src="js/view/overviewView.js"></script>
+  <script src="js/view/overviewCardView.js"></script>
   <!-- TODO: Here you should include JS code for your other views -->
   </body>
 </html>

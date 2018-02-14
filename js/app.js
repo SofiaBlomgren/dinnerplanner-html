@@ -7,6 +7,8 @@ $(function() {
 	var dish = new Dish($("#dish"),model);
 	var card = new Card($("#card"),model);
 	var myDinner = new MyDinner($("#myDinner"),model);
+	var overview = new Overview($("#overview"),model);
+	var overviewCard = new OverviewCard($("#overviewCard"),model);
 
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
