@@ -36,11 +36,6 @@ var Dish = function (container, model) {
 	var currentDish = model.getDish(3);
 	var people = model.getNumberOfGuests();
 
-	var dishName = container.find("#dishName");
-	var dishImg = container.find("#dishImg");
-	var dishDescription = container.find("#dishDescription");
-
-
 
 	var ingredients = [];
 
@@ -51,7 +46,7 @@ var Dish = function (container, model) {
 
 			var newDiv2 = document.createElement("div");
 			newDiv2.className = "col-3";
-			var newContent = document.createTextNode(ingredient.quantity*people + ingredient.unit);
+			var newContent = document.createTextNode(ingredient.quantity*people + " " + ingredient.unit);
 			newDiv2.appendChild(newContent);
 			newDiv1.appendChild(newDiv2);
 
@@ -79,8 +74,21 @@ var Dish = function (container, model) {
 			})
 
 
+	var totalprice = 0;
+	
+	currentDish.ingredients.forEach(function(ingredient){
+		totalprice += ingredient.price*people;
+
+		})
+
+
+
+	var dishName = container.find("#dishName");
+	var dishImg = container.find("#dishImg");
+	var dishDescription = container.find("#dishDescription");
 	var allIngredients = container.find("#allIngredients");
-	allIngredients.html(ingredients);
+	var price = container.find("#price");
+
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
 	 * define them as this.someName. We don't need this in Lab 1 yet, but in Lab 2 it 
@@ -91,8 +99,6 @@ var Dish = function (container, model) {
 	 * this button and do something with it (see Lab 2).
 	 * 
 	 */
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
 	
 	/**
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
@@ -101,5 +107,7 @@ var Dish = function (container, model) {
 	dishName.html(currentDish.name);
 	dishImg.attr("src","images/"+currentDish.image);
 	dishDescription.html(currentDish.description);
+	allIngredients.html(ingredients);
+	price.html(totalprice);
 	
 }
