@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
   </head>
-  <body>
+  <body id="printout">
   <nav class="navbar navbar-dark" style="background-color: #dadada;">
       <a class="navbar-brand" href="#">Dinner planner</a>
   </nav>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" style="margin-top: 15px;">
       <div class="col" style="text-align: left;">
-        <h4>My dinner: 3 people</h4>
+        <h4>My dinner: <span id="people"></span></h4>
       </div>
       <div class="col" style="text-align: right;">
         <button type="button" class="btn btn-warning">Go back and edit dinner</button>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <hr>
-  <div class="container-fluid" id="printout">
+  <div class="container-fluid">
     <div  id="dinnerPrintout">
     </div>
   </div>

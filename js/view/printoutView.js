@@ -1,29 +1,8 @@
 var Printout = function (container, model) {
-	/*
-    <div class="row">
-      <div class="col-2" style="text-align: left;">
-        <img style="width: 80%;" src="images/bakedbrie.jpg"/>
-      </div>
-      <div class="col-4" style="text-align: left;">
-        <h2>Baked brie</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-        </p>
-      </div>
-      <div class="col">
-        <h5>Preparation</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-          </p>
-        </p>
-      </div>
-    </div>
-	*/
+
 
 	var dishes = model.getFullMenu();
-	var people = model.getNumberOfGuests();
+	//var people = model.getNumberOfGuests();
 
 	var printout = [];
 
@@ -31,6 +10,7 @@ var Printout = function (container, model) {
 
 			var newDiv1 = document.createElement("div");
 			newDiv1.className = "row";
+			newDiv1.style = "margin-bottom: 20px;"
 
 			var newDiv2 = document.createElement("div");
 			newDiv2.className = "col-3";
@@ -78,13 +58,10 @@ var Printout = function (container, model) {
 			})
 
 
-
-
-
+	var people = container.find("#people");
 	var dinnerPrintout = container.find("#dinnerPrintout");
 
-
-
 	dinnerPrintout.html(printout);
+	people.html(model.getNumberOfGuests());
 	
 }

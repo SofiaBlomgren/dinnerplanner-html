@@ -33,7 +33,10 @@ var Overview = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
+<<<<<<< HEAD
+=======
 	
+>>>>>>> 5755b55962d823ddccb90d89a6a83def735b357f
 
 
 	var people = model.getNumberOfGuests();
