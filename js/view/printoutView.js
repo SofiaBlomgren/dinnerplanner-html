@@ -2,8 +2,8 @@ var Printout = function (container, model) {
 
 
 	var dishes = model.getFullMenu();
-	//var people = model.getNumberOfGuests();
 
+	//Stores the dishPrintout information of each dish
 	var printout = [];
 
 	var dishPrintout = dishes.forEach(function(dish){
