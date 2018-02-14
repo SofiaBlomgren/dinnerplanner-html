@@ -33,19 +33,20 @@ var Overview = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	console.log(model.getFullMenu());
+	
 
 	var people = model.getNumberOfGuests();
 
 	var TotalDishPrice = model.getFullMenu().forEach(function(dish){
 
 		var dishPrice = 0
-		model.getFullMenu().ingredients.forEach(function(ingredient){
+		dish.ingredients.forEach(function(ingredient){
 			dishPrice += ingredient.price*people;
-		})
+		});
 		return dishPrice;
-	})
+	});
 
+	console.log(TotalDishPrice);
 
 	var numberOfGuests = container.find("#numberOfGuests");
 	var dishPrice = container.find("#dishPrice");

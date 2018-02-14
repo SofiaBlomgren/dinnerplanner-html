@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
   </head>
-  <body>
+  <body id="overview">
   <nav class="navbar navbar-dark" style="background-color: #dadada;">
       <a class="navbar-brand" href="#">Dinner planner</a>
   </nav>
-  <div class="container-fluid" id="overview">
+  <div class="container-fluid">
     <div class="row">
       <div class="col" style="text-align: left;">
         <h4>My dinner: <span id='numberOfGuests'></span> people</h4>
@@ -26,34 +26,11 @@
     </div>
   </div>
   <hr>
-  <div id="overviewCard" id="overview">
-  <div class="cards" id='selectedDishes'></div>
-  <div id='dishPrice'></div>
-  <!--<div class="container-fluid" style="width:50%;">
-    <div align="center">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="images/bakedbrie.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title" style="text-align: center;">Baked brie</h4>
-            </div>
-          </div>
-          <p class="text-danger" style="text-align: right; padding-right: 25px;">89.00 SEK</p>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="images/icecream.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4 class="card-title" style="text-align: center;">Ice cream</h4>
-            </div>
-          </div>
-          <p class="text-danger" style="text-align: right; padding-right: 25px;">40.00 SEK</p>
-        </div>
-        <vr>
-      </div>
-    </div>-->
+  <div id="overviewCard">
+    <div class="cards" id="selectedDishes"></div>
   </div>
+  <div id="dishPrice"></div>
+  <!--<p class="text-danger" id='dishPrice' style="text-align: right; padding-right: 25px;"></p>-->
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
