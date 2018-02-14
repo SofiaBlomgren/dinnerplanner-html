@@ -33,7 +33,24 @@ var Overview = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
+	console.log(model.getFullMenu());
+
+	var people = model.getNumberOfGuests();
+
+	var TotalDishPrice = model.getFullMenu().forEach(function(dish){
+
+		var dishPrice = 0
+		model.getFullMenu().ingredients.forEach(function(ingredient){
+			dishPrice += ingredient.price*people;
+		})
+		return dishPrice;
+	})
+
+
 	var numberOfGuests = container.find("#numberOfGuests");
+	var dishPrice = container.find("#dishPrice");
+
+	//var model.getFullMenu().forEach(function(dish){
 
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
@@ -53,6 +70,7 @@ var Overview = function (container, model) {
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 	numberOfGuests.html(model.getNumberOfGuests());
+	dishPrice.html(TotalDishPrice);
 	
 }
  
