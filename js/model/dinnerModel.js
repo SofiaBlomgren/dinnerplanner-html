@@ -50,9 +50,9 @@ var DinnerModel = function() {
 		return selecteddish}
 
 	//Returns all the dishes on the menu.
-	this.getFullMenu = selecteddishes.forEach(function(dish){
-    		return dish;
-    })
+	this.getFullMenu = function(){
+    		return selecteddishes;
+    }
 	
 
 	//Returns all ingredients for a recipe and .
