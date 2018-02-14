@@ -23,6 +23,7 @@ var MyDinner = function (container, model) {
 
 		var newDiv1 = document.createElement("div");
 		newDiv1.className = "row";
+		newDiv1.style = "margin-bottom: 10px;";
 
 		var newDiv2 = document.createElement("div");
 		newDiv2.className = "col";
@@ -35,17 +36,20 @@ var MyDinner = function (container, model) {
 
 		dish.ingredients.forEach(function(ingredient){
 			price += ingredient.price*people;
-			})
+			});
 
 		var newDiv3 = document.createElement("div");
 		newDiv3.className = "col";
 		newDiv3.style = "text-align: right;";
-		var newContent = document.createTextNode(price + "SEK");
+		var newContent = document.createTextNode(price + " SEK");
 		newDiv3.appendChild(newContent);
 		newDiv1.appendChild(newDiv3);
 
+		dishes.push(newDiv1);
+
 		})
 
+	console.log(dishes);
 
 	var people = container.find("#people")
 	var dish = container.find("#dish")
