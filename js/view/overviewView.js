@@ -35,17 +35,21 @@ var Overview = function (container, model) {
 	 */
 	
 
-	var people = model.getNumberOfGuests();
 
-	var TotalDishPrice = model.getFullMenu().forEach(function(dish){
+	var people = model.getNumberOfGuests();
+	var htmlString = "<h1>";
+	var TotalDishPrice = model.getFullMenu();
+	TotalDishPrice.forEach(function(dish){
 
 		var dishPrice = 0
 		dish.ingredients.forEach(function(ingredient){
 			dishPrice += ingredient.price*people;
 		});
-		return dishPrice;
-	});
 
+		htmlString +=  dishPrice + " ";
+
+	});
+	htmlString += "</h1>"
 	console.log(TotalDishPrice);
 
 	var numberOfGuests = container.find("#numberOfGuests");
@@ -71,7 +75,7 @@ var Overview = function (container, model) {
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
 	numberOfGuests.html(model.getNumberOfGuests());
-	dishPrice.html(TotalDishPrice);
+	dishPrice.html(htmlString);
 	
 }
  
