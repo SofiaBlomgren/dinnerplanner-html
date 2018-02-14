@@ -21,7 +21,7 @@ var Printout = function (container, model) {
       </div>
     </div>
 	*/
-	console.log(model.getFullMenu());
+
 	var dishes = model.getFullMenu();
 	var people = model.getNumberOfGuests();
 
