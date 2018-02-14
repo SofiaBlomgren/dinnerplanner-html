@@ -34,8 +34,6 @@ var Overview = function (container, model) {
 	 * 
 	 */
 
-
-
 	var people = model.getNumberOfGuests();
 	var htmlString = "<h1>";
 	var TotalDishPrice = model.getFullMenu();

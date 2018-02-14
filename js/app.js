@@ -18,4 +18,8 @@ $(function() {
 	 * of the specific view you're working with (see exampleView.js).
 	 */
 
+	 $("#myDinner").show()
+	 $("#card").show()
+	 $("#printout").hide()
+
 });
