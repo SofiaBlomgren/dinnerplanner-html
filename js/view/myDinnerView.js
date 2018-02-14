@@ -1,19 +1,8 @@
+// The view for the sidebar with the menu
+
 var MyDinner = function (container, model) {
 	
-	/**
-	 * We use the @method find() on @var {jQuery object} container to look for various elements 
-	 * inside the view in orther to use them later on. For instance:
-	
-	<div class="row">
-            <div class="col" style="text-align: left;">
-              <span id='dishName'></span>
-            </div>
-            <div class="col" style="text-align: right;">
-              <span id='price'></span> SEK
-            </div>
-    </div>
-	 */
-	
+	// 
 	var menuDishes = model.getFullMenu();
 	var people = model.getNumberOfGuests();
 
@@ -49,20 +38,11 @@ var MyDinner = function (container, model) {
 
 		})
 
-	console.log(dishes);
-
+	//
 	var people = container.find("#people")
 	var dish = container.find("#dish")
-	//var dishName = container.find("#dishName");
-	//var price = container.find("#price");
 
-	/**
-	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
-	 * in our view to dynamically set it's value to "Hello World".
-	 */
-	//dishName.html(currentDish.name);
 	people.attr("value",model.getNumberOfGuests());
 	dish.html(dishes);
-	//price.html(dishprice);
 	
 }
