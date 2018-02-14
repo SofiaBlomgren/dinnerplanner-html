@@ -33,7 +33,6 @@ var Overview = function (container, model) {
 	 * in some other view gives the same ID to another element.
 	 * 
 	 */
-	console.log(model.getFullMenu());
 
 	var people = model.getNumberOfGuests();
 
