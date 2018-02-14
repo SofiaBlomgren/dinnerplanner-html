@@ -50,10 +50,10 @@ var DinnerModel = function() {
 		return selecteddish}
 
 	//Returns all the dishes on the menu.
-	this.getFullMenu = function() {
-		for (i = 0; i < selecteddish.length; i++) {
-    		return selecteddish.name;} //We want the names of the selected dishes, not sure how
-	}
+	this.getFullMenu = selecteddishes.forEach(function(ingredient){
+    		return selecteddish;
+    })
+	
 
 	//Returns all ingredients for a recipe and .
 	this.getDishIngredients = function(selectedDish) {
