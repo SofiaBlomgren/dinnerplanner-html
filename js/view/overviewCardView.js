@@ -14,7 +14,7 @@
  */ 
 
 
-var Card = function (container, model) {
+var OverviewCard = function (container, model) {
 	
 	/**
 	 * We use the @method find() on @var {jQuery object} container to look for various elements 
@@ -40,7 +40,7 @@ var Card = function (container, model) {
 
 	var cardContainer = [];
 
-	var createCard = model.getAllDishes().forEach(function(dish){
+	var createCard = model.getFullMenu().forEach(function(dish){
 
 			var newDiv1 = document.createElement("div");
 			newDiv1.className = "card";
@@ -66,8 +66,8 @@ var Card = function (container, model) {
 			})
 
 
-	var allDishes = container.find("#allDishes");
-	allDishes.html(cardContainer);
+	var selectedDishes = container.find("#selectedDishes");
+	selectedDishes.html(cardContainer);
 
 	/**
 	 * When we want references to some view elements to be available from outside of view, we 
