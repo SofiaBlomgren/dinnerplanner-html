@@ -23,7 +23,50 @@ $(function() {
 	 * of the specific view you're working with (see exampleView.js).
 	 */
 
+	var hideAllViews = function(){
+       home.hide();
+       myDinner.hide();
+       selectDish.hide();
+       card.hide();
+       dish.hide();
+       overview.hide();
+       overviewCard.hide();
+       printout.hide();
+    }
 
+    this.showHome = function(){
+        hideAllViews();
+        home.show();
+    }
+
+    this.showSelectDish = function(){
+        hideAllViews();
+        myDinner.show();
+       	selectDish.show();
+       	card.show();
+    }
+
+    this.showDishDetails = function(){
+        hideAllViews();
+        myDinner.show();
+        dish.show();
+    }
+
+    /*this.showSelectDishAgain = function(){
+        hideAllViews();
+        home.show();
+    }*/
+
+    this.showDinnerOverview = function(){
+        hideAllViews();
+        overview.show();
+       	overviewCard.show();
+    }
+
+    this.showDinnerPrintout = function(){
+        hideAllViews();
+        printout.show();
+    }
 
 
 
