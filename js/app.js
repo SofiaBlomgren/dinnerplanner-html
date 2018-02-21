@@ -76,13 +76,13 @@ $(function() {
 
 
 	 $("#home").hide()
-	 $("#myDinner").show()
-	 $("#selectDish").show()
-	 $("#card").show()
+	 $("#myDinner").hide()
+	 $("#selectDish").hide()
+	 $("#card").hide()
 	 $("#dish").hide()
 	 $("#overview").hide()
 	 $("#overviewCard").hide()
-	 $("#printout").hide()
+	 $("#printout").show()
 
 
 });
