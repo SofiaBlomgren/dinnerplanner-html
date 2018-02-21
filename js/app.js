@@ -11,7 +11,7 @@ $(function() {
 	var overview = new Overview($("#overview"),model);
 	var overviewCard = new OverviewCard($("#overviewCard"),model);
 	var printout = new Printout($("#printout"),model);
-
+	/*
 	var homeController = new HomeController(home, model, this)
 	var myDinnerController = new MyDinnerController(myDinner, model, this)
 	var selectDishController = new SelectDishController(selectDish, model, this)
