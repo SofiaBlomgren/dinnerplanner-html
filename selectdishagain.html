@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+  <nav class="navbar navbar-dark" style="background-color: #dadada;">
+    <ul class="navbar-nav nav nav-justified">
+      <li><a class="navbar-brand" href="#">Dinner planner</a></li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2" id="myDinner" style="border-right: 3px solid black; padding-bottom: auto;">
+        <h4>My dinner</h4>
+        <div style="padding-top: 20px;">
+          <label>People:</label>
+          <input type="number" style="width: 50%; padding-left: 10px; margin-left: 10px;" value="" min="0" id="people"/>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col font-weight-bold" style="text-align: left;">
+              dish name
+            </div>
+            <div class="col font-weight-bold" style="text-align: right;">
+              cost
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container-fluid">
+          <div id="dish"></div>
+        </div>
+        <p class="text-danger" style="text-align: right; padding-top: 10px; padding-right: 15px;">89.00 SEK</p>
+      <center><button type="button" class="btn btn-warning btn-md">Confirm dinner</button></center>
+      </div>
+      <div class="col">
+        <p style="margin: 30px;">Add another dish</p>
+        <div class="input-group mb-3" style="padding-bottom: 20px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Enter key words" aria-label="Search">
+          <select class="custom-select" id="inputGroupSelect03">
+            <option selected>All</option>
+            <option value="1">Main Course</option>
+            <option value="2">Side Dish</option>
+            <option value="3">Dessert</option>
+            <option value="4">Appetizer</option>
+          </select>
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
+        <hr>
+        <div id="card">
+        <div class="cards" id='allDishes'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+  <!-- The application JavaScript code -->
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/myDinnerView.js"></script>
+  <script src="js/view/dishView.js"></script>
+  <script src="js/view/cardView.js"></script>
+  <script src="js/view/printoutView.js"></script>
+  <script src="js/view/overviewCardView.js"></script>
+  <script src="js/view/overviewView.js"></script>
+  <!-- TODO: Here you should include JS code for your other views -->
+  </body>
+</html>
