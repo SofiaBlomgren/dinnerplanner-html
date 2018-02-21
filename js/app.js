@@ -11,7 +11,7 @@ $(function() {
 	var overview = new Overview($("#overview"),model);
 	var overviewCard = new OverviewCard($("#overviewCard"),model);
 	var printout = new Printout($("#printout"),model);
-	/*
+	
 	var homeController = new HomeController(home, model, this)
 	var myDinnerController = new MyDinnerController(myDinner, model, this)
 	var selectDishController = new SelectDishController(selectDish, model, this)
@@ -20,7 +20,7 @@ $(function() {
 	var overviewController = new OverviewController(overview, model, this)
 	var overviewCardController = new OverviewCardController(sidebarView, model, this)
 	var printoutController = new PrintoutController(printout, model, this)
-	*/
+	
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
@@ -38,7 +38,7 @@ $(function() {
        overviewCard.hide();
        printout.hide();
     }
-    /*
+    
     this.showHome = function(){
         hideAllViews();
         home.show();
@@ -61,7 +61,7 @@ $(function() {
         hideAllViews();
         home.show();
     }*/
-    /*
+    
     this.showDinnerOverview = function(){
         hideAllViews();
         overview.show();
@@ -72,7 +72,7 @@ $(function() {
         hideAllViews();
         printout.show();
     }
-	*/
+	
 
 
 	 $("#home").hide()
