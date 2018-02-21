@@ -27,7 +27,7 @@ $(function() {
 	 * In other places you should limit the search only to the children 
 	 * of the specific view you're working with (see exampleView.js).
 	 */
-
+	
 	var hideAllViews = function(){
        home.hide();
        myDinner.hide();
@@ -38,7 +38,7 @@ $(function() {
        overviewCard.hide();
        printout.hide();
     }
-
+    /*
     this.showHome = function(){
         hideAllViews();
         home.show();
@@ -61,7 +61,7 @@ $(function() {
         hideAllViews();
         home.show();
     }*/
-
+    /*
     this.showDinnerOverview = function(){
         hideAllViews();
         overview.show();
@@ -72,7 +72,7 @@ $(function() {
         hideAllViews();
         printout.show();
     }
-
+	*/
 
 
 	 $("#home").hide()
