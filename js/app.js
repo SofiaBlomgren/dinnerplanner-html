@@ -20,7 +20,7 @@ $(function() {
 	var overviewController = new OverviewController(overview, model, this)
 	var overviewCardController = new OverviewCardController(sidebarView, model, this)
 	var printoutController = new PrintoutController(printout, model, this)
-
+	*/
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
