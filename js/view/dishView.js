@@ -1,6 +1,6 @@
 //View of the recipe of a dish
 
-var Dish = function (container, model) {
+var Dish = function (container, model, id) {
 
 	this.hide = function(){
 		container.hide()
@@ -10,7 +10,7 @@ var Dish = function (container, model) {
 		container.show()
 	}
 	
-	var currentDish = model.getDish(3);
+	var currentDish = model.getDish(id);
 	var people = model.getNumberOfGuests();
 
 	//Stores the rows of ingredients created in ingredientsCard

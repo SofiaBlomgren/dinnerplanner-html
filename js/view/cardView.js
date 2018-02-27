@@ -1,6 +1,6 @@
 //View of cards that contain the name and image of a dish
 
-var Card = function (container, model) {
+var Card = function (container, model, app) {
 
 	this.hide = function(){
 		container.hide()
@@ -37,11 +37,15 @@ var Card = function (container, model) {
 			
 			cardContainer.push(newDiv1);
 
+			new CardController(newDiv1, dish, app);
+
 			})
 
 
 	var allDishes = container.find("#allDishes");
 	allDishes.html(cardContainer);
+
+	this.cardButton = container.find(".card");
 
 	
 }

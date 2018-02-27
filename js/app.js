@@ -7,17 +7,16 @@ $(function() {
 	var home = new Home($("#home"),model);
 	var myDinner = new MyDinner($("#myDinner"),model);
 	var selectDish = new SelectDish($("#selectDish"),model);
-	var card = new Card($("#card"),model);
-	var dish = new Dish($("#dish"),model);
+	var card = new Card($("#card"),model, app);
 	var overview = new Overview($("#overview"),model);
 	var overviewCard = new OverviewCard($("#overviewCard"),model);
 	var printout = new Printout($("#printout"),model);
 	
 	//var homeController = new HomeController(home, model, this)
 	//var myDinnerController = new MyDinnerController(myDinner, model, this)
-	/*var selectDishController = new SelectDishController(selectDish, model, this)
+	//var selectDishController = new SelectDishController(selectDish, model, this)
 	var cardController = new CardController(card, model, this)
-	var dishController = new DishController(dish, model, this)
+	/*var dishController = new DishController(dish, model, this)
 	var overviewController = new OverviewController(overview, model, this)
 	var overviewCardController = new OverviewCardController(sidebarView, model, this)
 	var printoutController = new PrintoutController(printout, model, this)*/
@@ -29,17 +28,29 @@ $(function() {
 	 * of the specific view you're working with (see exampleView.js).
 	 */
 	
+	 var dish = $("#dish")
+
 	var hideAllViews = function(){
        home.hide();
        myDinner.hide();
        selectDish.hide();
-       card.hide();
        dish.hide();
+       card.hide();
        overview.hide();
        overviewCard.hide();
        printout.hide();
     }
     
+
+    this.showDishDetails = function(id){
+
+		var dish = new Dish($("#dish"), model, id);
+        hideAllViews();
+        myDinner.show();
+        dish.show();
+    }
+
+
     this.showHome = function(){
         hideAllViews();
         home.show();
@@ -52,11 +63,7 @@ $(function() {
        	card.show();
     }
 
-    this.showDishDetails = function(){
-        hideAllViews();
-        myDinner.show();
-        dish.show();
-    }
+   
 
     /*this.showSelectDishAgain = function(){
         hideAllViews();
@@ -80,6 +87,8 @@ $(function() {
     home.homeButton.click(function(){
     	app.showSelectDish();
     });
+
+
 
 
 
