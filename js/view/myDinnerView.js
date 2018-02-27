@@ -1,6 +1,14 @@
 // The view for the sidebar with the menu
 
 var MyDinner = function (container, model) {
+
+	this.hide = function(){
+		container.hide()
+	}
+
+	this.show = function(){
+		container.show()
+	}
 	
 	// 
 	var menuDishes = model.getFullMenu();

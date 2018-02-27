@@ -2,6 +2,14 @@
 
 var Card = function (container, model) {
 
+	this.hide = function(){
+		container.hide()
+	}
+
+	this.show = function(){
+		container.show()
+	}
+
 	//Stores the cards created in createCard
 	var cardContainer = [];
 

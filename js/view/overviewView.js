@@ -1,6 +1,14 @@
 // Main view of the dinner overview page
 
 var Overview = function (container, model) {
+
+	this.hide = function(){
+		container.hide()
+	}
+
+	this.show = function(){
+		container.show()
+	}
 	
 	// Gets the number of guests
 	var people = model.getNumberOfGuests();

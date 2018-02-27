@@ -1,6 +1,14 @@
 // Creates the cards on the dinner overview page
 
 var OverviewCard = function (container, model) {
+
+	this.hide = function(){
+		container.hide()
+	}
+
+	this.show = function(){
+		container.show()
+	}
 	
 	// Stores the cards
 	var cardContainer = [];

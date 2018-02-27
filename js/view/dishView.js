@@ -1,6 +1,14 @@
 //View of the recipe of a dish
 
 var Dish = function (container, model) {
+
+	this.hide = function(){
+		container.hide()
+	}
+
+	this.show = function(){
+		container.show()
+	}
 	
 	var currentDish = model.getDish(3);
 	var people = model.getNumberOfGuests();

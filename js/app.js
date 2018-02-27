@@ -1,4 +1,5 @@
 $(function() {
+	var app = this;
 	//We instantiate our model
 	var model = new DinnerModel();
 	
@@ -74,11 +75,10 @@ $(function() {
     }
 
 
-    hideAllViews();
     this.showHome();
 
-    Home.homeButton.click(function(){
-    	this.showSelectDish();
+    home.homeButton.click(function(){
+    	app.showSelectDish();
     });
 
 
