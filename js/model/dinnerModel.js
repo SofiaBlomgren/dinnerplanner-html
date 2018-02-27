@@ -5,6 +5,7 @@ var DinnerModel = function() {
 	// and selected dishes for the dinner menu
 
 	var numberofguests = 6;
+	var observers = [];
 
 	var selecteddishes = [{
 		'id':3,
@@ -157,6 +158,18 @@ var DinnerModel = function() {
 			if(dishes[key].id == id) {
 				return dishes[key];
 			}
+		}
+	}
+
+
+
+	this.addObserver = function(observer) {
+		observers.push(observer);
+	}
+
+	var notifyObservers = function(args) {
+		for(var i=0; i < observers.length; i++){
+			observers[i].update(args)
 		}
 	}
 	

@@ -12,14 +12,14 @@ $(function() {
 	var overviewCard = new OverviewCard($("#overviewCard"),model);
 	var printout = new Printout($("#printout"),model);
 	
-	var homeController = new HomeController(home, model, this)
-	var myDinnerController = new MyDinnerController(myDinner, model, this)
-	var selectDishController = new SelectDishController(selectDish, model, this)
+	//var homeController = new HomeController(home, model, this)
+	//var myDinnerController = new MyDinnerController(myDinner, model, this)
+	/*var selectDishController = new SelectDishController(selectDish, model, this)
 	var cardController = new CardController(card, model, this)
 	var dishController = new DishController(dish, model, this)
 	var overviewController = new OverviewController(overview, model, this)
 	var overviewCardController = new OverviewCardController(sidebarView, model, this)
-	var printoutController = new PrintoutController(printout, model, this)
+	var printoutController = new PrintoutController(printout, model, this)*/
 	
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
@@ -72,17 +72,15 @@ $(function() {
         hideAllViews();
         printout.show();
     }
-	
 
 
-	 $("#home").hide()
-	 $("#myDinner").hide()
-	 $("#selectDish").hide()
-	 $("#card").hide()
-	 $("#dish").hide()
-	 $("#overview").hide()
-	 $("#overviewCard").hide()
-	 $("#printout").show()
+    hideAllViews();
+    this.showHome();
+
+    Home.homeButton.click(function(){
+    	this.showSelectDish();
+    });
+
 
 
 });

@@ -1,4 +1,4 @@
-var homeController = function(view, model, app) {
+var HomeController = function(view, model, app) {
 
     view.selectDish.on('click', function(){
         app.showSelectDish();
