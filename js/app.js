@@ -89,6 +89,9 @@ $(function() {
     });
 
 
+    dish.backtosearchButton.click(function(){
+    	app.showSelectDish();
+    });
 
 
 
