@@ -105,8 +105,8 @@ var DinnerModel = function() {
 		var totalprice = 0
 		selecteddishes.forEach(function(dish){
 			dish.ingredients.forEach(function(ingredient){
-			totalprice += ingredient.quantity*numberofguests}
-			}
+			totalprice += ingredient.quantity*numberofguests})
+			})
 		return totalprice
 	}
 

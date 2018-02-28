@@ -45,12 +45,14 @@ var MyDinner = function (container, model) {
 		dishes.push(newDiv1);
 
 		})
-
+	console.log(dishes);
 	//
 	var people = container.find("#people")
-	var dish = container.find("#dish")
+	var menudish = container.find("#menudish")
+	var totalprice = container.find("#totalprice")
 
 	people.attr("value",model.getNumberOfGuests());
-	dish.html(dishes);
+	menudish.html(dishes);
+	totalprice.html(model.getTotalMenuPrice());
 	
 }
