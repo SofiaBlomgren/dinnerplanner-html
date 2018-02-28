@@ -44,7 +44,7 @@ $(function() {
     this.showDishDetails = function(id){
 
 		var dish = new Dish($("#dish"), model, id);
-    var dishController = new DishController(dish, model, this)
+    	var dishController = new DishController(dish, model, this)
         hideAllViews();
         myDinner.show();
         dish.show();
