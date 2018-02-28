@@ -1,8 +1,7 @@
-var DishController = function(view, model) {
+var DishController = function(view, model, app) {
     
-	dish.backtosearchButton.click(function(){
-    	this.showSelectDish();
-    	view.hide()
+	view.backtosearchButton.click(function(){
+    	app.showSelectDish();
     });
     //vid knapptryck:
     //view.hide()
