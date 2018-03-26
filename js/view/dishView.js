@@ -52,6 +52,7 @@ var Dish = function (container, model, id) {
 			})
 
 	this.backtosearchButton = container.find("#backtosearch");
+	this.addtomenuButton = container.find("#addtomenu");
 
 
 	//Stores the total price of all ingredients of the dish

@@ -9,9 +9,24 @@ var MyDinner = function (container, model) {
 	this.show = function(){
 		container.show()
 	}
+
+	model.addObserver(this);
+
+	this.update = function(args) {
+		if (args == 'addtomenu'){
+			updateMenu();
+			console.log('hejhej');
+		}
+	}
+
+	this.update('addtomenu');
 	
 	// 
+
+	function updateMenu() {
+
 	var menuDishes = model.getFullMenu();
+	console.log(menuDishes);
 	var people = model.getNumberOfGuests();
 
 	var dishes = [];
@@ -45,8 +60,7 @@ var MyDinner = function (container, model) {
 		dishes.push(newDiv1);
 
 		})
-	console.log(dishes);
-	//
+
 	var people = container.find("#people")
 	var menudish = container.find("#menudish")
 	var totalprice = container.find("#totalprice")
@@ -54,5 +68,8 @@ var MyDinner = function (container, model) {
 	people.attr("value",model.getNumberOfGuests());
 	menudish.html(dishes);
 	totalprice.html(model.getTotalMenuPrice());
+	}
+
+	//
 	
 }

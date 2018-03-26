@@ -94,8 +94,8 @@ var DinnerModel = function() {
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function(){
+			notifyObservers('addtomenu');
     		return selecteddishes;
-    		notifyObservers('numberofguests');
 
     }
 	
@@ -130,6 +130,7 @@ var DinnerModel = function() {
 				selecteddishes.push(dishes[key])
 			}
 		}
+		notifyObservers('addtomenu');
 	}
 
 
