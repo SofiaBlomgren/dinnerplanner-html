@@ -76,7 +76,7 @@ var DinnerModel = function() {
 	//Sets numberofguests to num
 	this.setNumberOfGuests = function(num) {
 		numberofguests = num;
-		notifyObservers('numberofguests')
+		notifyObservers('numberofguests');
 	}
 	
 	//Returns numberofguests
@@ -95,6 +95,8 @@ var DinnerModel = function() {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function(){
     		return selecteddishes;
+    		notifyObservers('numberofguests');
+
     }
 	
 
