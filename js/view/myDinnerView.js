@@ -19,7 +19,7 @@ var MyDinner = function (container, model) {
 		}
 	}
 
-	this.update('addtomenu');
+	// this.update('addtomenu');
 	
 	// 
 

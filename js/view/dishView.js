@@ -11,6 +11,7 @@ var Dish = function (container, model, id) {
 	}
 	
 	var currentDish = model.getDish(id);
+	this.id = id
 	var people = model.getNumberOfGuests();
 
 	//Stores the rows of ingredients created in ingredientsCard

@@ -6,7 +6,7 @@ var DishController = function(view, model, app) {
 
     view.addtomenuButton.click(function(){
     	model.addDishToMenu(view.id);
-    	console.log(dish.id);
+    	console.log(view.id);
     });
     //vid knapptryck:
     //view.hide()

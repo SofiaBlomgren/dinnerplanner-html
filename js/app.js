@@ -44,11 +44,12 @@ $(function() {
 
     this.showDishDetails = function(id){
 
-		var dish = new Dish($("#dish"), model, id);
+		  var dish = new Dish($("#dish"), model, id);
     	var dishController = new DishController(dish, model, this)
-        hideAllViews();
-        myDinner.show();
-        dish.show();
+      hideAllViews();
+      myDinner.show();
+      dish.show();
+      //Flytta ut view och controller!! Ändra hur vi hämtar id.
     }
 
 
