@@ -63,10 +63,20 @@ var DinnerModel = function() {
 			}]
 		}];
 
+	this.addObserver = function(observer) {
+		observers.push(observer);
+	}
+
+	var notifyObservers = function(args) {
+		for(var i=0; i < observers.length; i++){
+			observers[i].update(args)
+		}
+	}
 
 	//Sets numberofguests to num
 	this.setNumberOfGuests = function(num) {
 		numberofguests = num;
+		notifyObservers('numberofguests')
 	}
 	
 	//Returns numberofguests
@@ -168,15 +178,7 @@ var DinnerModel = function() {
 
 
 
-	this.addObserver = function(observer) {
-		observers.push(observer);
-	}
 
-	var notifyObservers = function(args) {
-		for(var i=0; i < observers.length; i++){
-			observers[i].update(args)
-		}
-	}
 	
 
 
