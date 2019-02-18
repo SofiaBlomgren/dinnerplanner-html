@@ -65,7 +65,7 @@ $(function() {
        	card.show();
     }
 
-   
+   //hej
 
     /*this.showSelectDishAgain = function(){
         hideAllViews();
