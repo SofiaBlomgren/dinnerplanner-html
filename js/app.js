@@ -17,8 +17,8 @@ $(function() {
 	//var selectDishController = new SelectDishController(selectDish, model, this)
 	var cardController = new CardController(card, model, this);
   //var dishController = new DishController(card, dishView, model, this);
-	/*var overviewController = new OverviewController(overview, model, this)
-	var overviewCardController = new OverviewCardController(sidebarView, model, this)
+	//var overviewController = new OverviewController(overview, model, this)
+	/*var overviewCardController = new OverviewCardController(sidebarView, model, this)
 	var printoutController = new PrintoutController(printout, model, this)*/
 	
 	/**
@@ -86,9 +86,13 @@ $(function() {
 
     this.showHome();
 
-    home.homeButton.click(function(){
+home.homeButton.click(function(){
     	app.showSelectDish();
     });
+
+    /*myDinner.confirmButton.click(function(){
+      app.showDinnerOverview();
+    });*/
 
 
     //dish.backtosearchButton.click(function(){

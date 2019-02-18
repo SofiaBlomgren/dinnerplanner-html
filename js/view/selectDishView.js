@@ -1,4 +1,4 @@
-// View of the select dush page
+// View of the select dish page
 
 var SelectDish = function (container, model) {
 	

@@ -4,6 +4,7 @@ var DishController = function(view, model, app) {
     	app.showSelectDish();
     });
 
+	//denna lägger på något vis till alla tidigare valda dishes för varje ny dish
     view.addtomenuButton.click(function(){
     	model.addDishToMenu(view.id);
     	console.log(view.id);

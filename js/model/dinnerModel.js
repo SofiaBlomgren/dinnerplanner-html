@@ -78,6 +78,7 @@ var DinnerModel = function() {
 	}
 
 
+
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		for(key in selecteddishes){

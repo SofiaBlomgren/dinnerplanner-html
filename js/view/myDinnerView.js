@@ -19,6 +19,8 @@ var MyDinner = function (container, model) {
 		}
 	}
 
+	this.confirmButton = container.find("#confirmButton");
+
 	// this.update('addtomenu');
 	
 	// 
@@ -69,6 +71,7 @@ var MyDinner = function (container, model) {
 	menudish.html(dishes);
 	totalprice.html(model.getTotalMenuPrice());
 	}
+
 
 	//
 	
